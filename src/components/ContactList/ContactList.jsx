@@ -1,11 +1,5 @@
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 import { useSelector } from 'react-redux';
-import {
-  selectContactsCount,
-  selectIsLoading,
-  selectError,
-} from 'redux/contacts/selectors';
-
 import { getContactsItems } from '../../redux/contacts/contactsSlice';
 import { getFilterValue } from '../../redux/filter/filterSlice';
 

@@ -40,4 +40,4 @@ export const store = configureStore({
     }),
 });
 
-export const persistor = persistStore(store); // Експортуємо "персистований" stor (persistor) у зовнішній код. Використовується для PersistGate (обгортці для App)
+export const persistor = persistStore(store); 

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import css from './ContactListItem.module.css';
-import { FcPhone } from 'react-icons/fc';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
 import { AiOutlineDelete } from 'react-icons/ai';
