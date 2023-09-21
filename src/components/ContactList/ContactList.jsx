@@ -15,7 +15,6 @@ export const ContactList = () => {
     ),
   ];
 
-  console.log(filterValue.filter);
   return (
     <ul className={css.list}>
       {filteredContacts.map(contact => (

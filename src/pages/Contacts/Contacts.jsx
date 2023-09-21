@@ -1,6 +1,6 @@
 import ContactForm from '../../components/ContactForm/ContactForm';
 import { Filter } from '../../components/Filter/Filter';
-import {Container} from 'components/conteiner/conteiner';
+import {Container} from 'components/Conteiner/Conteiner';
 import { ContactList } from '../../components/ContactList/ContactList';
 import { useDispatch, useSelector } from 'react-redux';
 import {
