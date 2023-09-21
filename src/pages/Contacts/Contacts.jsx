@@ -7,10 +7,10 @@ import {
   selectContactsCount,
   selectIsLoading,
   selectError,
-} from 'redux/contacts/selectors';
+} from 'reduxs/contacts/selectors';
 // import { Toaster } from 'react-hot-toast';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/contacts/operations';
+import { fetchContacts } from 'reduxs/contacts/operations';
 import { ColorRing } from 'react-loader-spinner';
 
 import css from './Contacts.module.css';
