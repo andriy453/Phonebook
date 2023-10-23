@@ -4,9 +4,9 @@
   margin-right: auto;
   text-align: center;
   padding: 40px;
-  background-color: rgb(251, 255, 167);
-  box-shadow:
-    1px 4px 6px rgba(0, 0, 0, 0.16),
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
+  /* background: #8985ad80; */
+    background: linear-gradient(90deg, #ff9c9c80, #a399ff80);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
 }

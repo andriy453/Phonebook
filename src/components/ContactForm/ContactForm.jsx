@@ -44,7 +44,7 @@ const ContactForm = () => {
             required
           />
         </label>
-        <label className="lable">
+        <label  className={css.lable}>
           Number
           <input
             className={css.contact_inp}

@@ -22,31 +22,15 @@ export const LoginForm = () => {
     <h2>Login</h2>
     <form  onSubmit={handleSubmit}>
       <div className={css.user_box}>
-      <input type="email" name="email" />
+      <input type="email" name="email" required/>
         <label>emeil</label>
       </div>
       <div className={css.user_box}>
-        <input type="password" name="password" />
+        <input type="password" name="password"  required/>
         <label>Password</label>
       </div>
-      <button  type="submit">Register</button>
+      <button  type="submit">Login</button>
     </form>
   </div>
-//   <div class="login-box">
-//   <h2>Login</h2>
-//   <form>
-//     <div class="user-box">
-//       <input type="text" name="" required="">
-//       <label>Username</label>
-//     </div>
-//     <div class="user-box">
-//       <input type="password" name="" required="">
-//       <label>Password</label>
-//     </div>
-//     <a>
-//       Submit
-//     </a>
-//   </form>
-// </div>
   );
 };
