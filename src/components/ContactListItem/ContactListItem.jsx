@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './ContactListItem.module.css';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'reduxs/contacts/operations';
+import { deleteContact } from 'redux/contacts/operations';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { FcBusinessman } from 'react-icons/fc';
 

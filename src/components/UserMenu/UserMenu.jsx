@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { logOut } from 'reduxs/auth/operations';
+import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
 import { FcBusinessman } from 'react-icons/fc';
 import css from './UserMenu.module.css';

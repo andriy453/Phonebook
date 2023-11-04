@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { register } from 'reduxs/auth/operations';
+import { register } from 'redux/auth/operations';
 import css from './RegisterForm.module.css';
 
 export const RegisterForm = () => {
@@ -36,6 +36,6 @@ export const RegisterForm = () => {
     </div>
     <button  type="submit">Register</button>
   </form>
-</div>
+    </div>
   );
 };
