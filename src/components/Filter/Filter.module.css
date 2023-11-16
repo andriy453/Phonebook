@@ -1,6 +1,4 @@
-.label {
-  margin-bottom: 15px;
-}
+
 
 .input {
   margin-left: 15px;
@@ -8,9 +6,5 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
-}
-
-.input:hover,
-.input:focus {
-  border: 1px solid red;
+  padding: 5px;
 }

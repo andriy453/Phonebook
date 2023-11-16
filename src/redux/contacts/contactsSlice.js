@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // import { nanoid } from 'nanoid';
 
-import { fetchContacts, addContact, deleteContact } from './operations';
+import { fetchContacts, addContact, deleteContact,updateContact} from './operations';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -47,6 +47,18 @@ const contactsSlice = createSlice({
       state.items.splice(index, 1);
     },
     [deleteContact.rejected]: handleRejected,
+
+      [updateContact.pending]:handlePending,
+      [updateContact.fulfilled](state, action)  {
+        const index = state.items.findIndex(
+          task => task.id === action.payload.id
+        );
+        state.items.splice(index, 1);
+        state.items.unshift(action.payload);
+        state.isLoading = false;
+        state.error = null;
+      },
+     [updateContact.rejected]: handleRejected
   },
 });
 

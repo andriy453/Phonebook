@@ -35,19 +35,18 @@ export default function App() {
         <span className={css.total_count}> {count}</span>
       </p>
       <Filter />
-      {isLoading && !error && (
+      {isLoading ? 
         <ColorRing
           visible={true}
           height="80"
           width="80"
           ariaLabel="blocks-loading"
-          wrapperStyle={{}}
+          wrapperStyle={{ position: "absolute",left: "50%",top: "69%",transform:" translate(-50%,-50%)"}}
           wrapperClass="blocks-wrapper"
-          colors={['#e15b64', '#f47e60', '#f8b26a', '#4bb36a', '#80bb3d']}
-        />
-      )}
+          colors={['#e15b64', '#f47e60', '#f8b26a', '#4bb36a', '#80bb3d']} />
+           : <ContactList />
+      }
       {error && <p className={css.errorMessage}>An error occurred: {error}</p>}
-      <ContactList />
     </Container>
   );
 }

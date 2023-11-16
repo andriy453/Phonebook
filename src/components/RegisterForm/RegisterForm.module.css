@@ -6,11 +6,10 @@
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-    background: transparent;
   box-sizing: border-box;
-  /* box-shadow: 0 15px 25px rgba(0,0,0,.6); */
+  box-shadow: 3px 8px 14px 0px rgba(136, 198, 253, 0.19);
   border-radius: 10px;
-      background: transparent;
+      background: rgba(193, 189, 189, 0.573);
       border: 2px solid rgba(255, 255, 255, 0.5);
       border-radius: 20px;
       backdrop-filter: blur(15px);
@@ -23,44 +22,29 @@
   text-align: center;
 }
 
-.login_box .user_box {
-  position: relative;
-}
-
 .login_box .user_box input {
   width: 100%;
-  padding: 10px 0;
   font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
+  color: #888;
+  border:  1px solid #54ADFF;
+  border-radius: 40px;
+  padding:  10px 16px;
+  box-sizing: border-box;
 }
-.login_box .user_box label {
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
+.conteinerInput{
+display: flex;
+flex-direction: column;
+gap: 30px;
+margin-bottom: 60px;
 }
 
-.login_box .user_box input ~label{
-  top: -20px;
-    left: 0;
-    color: #f15fd2;
-    font-size: 12px;
-}
 
 .login_box form button {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #f15fd2;
+  border-radius: 40px;
+  color: #000000;
   background-color: transparent;
   border: none;
   font-size: 16px;
@@ -68,17 +52,40 @@
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
+  letter-spacing: 4px;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .login_box button:hover {
-  background: #f15fd2;
+    background: var(--unnamed, #54ADFF);
   color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #f15fd2,
-              0 0 25px #f15fd2,
-              0 0 50px #f15fd2,
-              0 0 100px #f15fd2;
+  box-shadow: 0 0 5px #5fa8f1,
+              0 0 25px #5f7ff1,
+              0 0 50px #5faff1,
+              0 0 100px #5faff1;
 }
 
+
+.link{
+  color:  #54ADFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    text-decoration-line: underline;
+}
+.conteinertoLogin{
+  display: flex;
+  justify-content: center;
+}
+.text{
+    color:  #888;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}

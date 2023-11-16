@@ -12,26 +12,25 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import storage from 'redux-persist/lib/storage'; 
 
-//Конфігурація для redux-persist (Persisting token field from auth slice to localstorage)
 const authPersistConfig = {
   key: 'auth',
   storage,
   whitelist: ['token'],
 };
 
-//Створюємо ""персистований" редюсер на основі authReducer
+
 const persistedReducer = persistReducer(authPersistConfig, authReducer);
 
-//Створюємо redux store
+
 export const store = configureStore({
   reducer: {
     auth: persistedReducer,
     contacts: contactsReducer,
     filters: filtersReducer,
   },
-  //Додаємо middleware (прошарок), щоб позбутися помилок
+
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

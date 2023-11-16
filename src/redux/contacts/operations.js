@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-//Створюємо асинхроний thunk для отримання списку контактів з бекенду
+
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
   async function (_, { rejectWithValue }) {
@@ -14,12 +14,12 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
-//Створюємо асинхроний thunk для додавання нового контакту
+
 export const addContact = createAsyncThunk(
   'contacts/addContact',
   async function (contact, { rejectWithValue }) {
     try {
-      const { data } = await axios.post('/contacts', contact); //другим параметром передаємо об'єкт даних
+      const { data } = await axios.post('/contacts', contact);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -27,7 +27,6 @@ export const addContact = createAsyncThunk(
   }
 );
 
-//Створюємо асинхроний thunk для видалення контакту
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async function (contactId, { rejectWithValue }) {
@@ -36,6 +35,20 @@ export const deleteContact = createAsyncThunk(
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
+    }
+  }
+);
+export const updateContact = createAsyncThunk(
+  'contacts/updateContact',
+  async (data, thunkAPI) => {
+    try {
+      const response = await axios.patch(`/contacts/${data.id}`, {
+        name: data.name,
+        number: data.number,
+      });
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
